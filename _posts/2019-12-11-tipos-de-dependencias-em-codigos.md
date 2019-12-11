@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Técnico] Tipos de Dependências"
+title: "[Técnico] Tipos de Dependências em códigos"
 published: true
 categories: [blog, técnico]
 tags: [dependência, .NET]
