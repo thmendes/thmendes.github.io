@@ -47,11 +47,11 @@ namespace FirstPartyDependency
 }
 ```
 
-Para escrever HelloWorld no console, a classe Program necessita chamar o método Write da classe WriteHelloWorld. Assim, criando uma dependência entre as duas entidades, onde Program depende de WriteHelloWorld.
+Para escrever HelloWorld no console, a classe Program necessita chamar o método Write da classe **WriteHelloWorld**. Assim, criando uma dependência entre as duas entidades, onde Program depende de WriteHelloWorld.
 
 ## Dependência de Framework
 
-O projeto acima, além de conter uma dependência first-party, também contém uma dependência de framework. Neste caso, por exemplo, o projeto depende do framework .NET Core 2.2 e utiliza um método WriteLine para mostrar a mensagem no console. Este método pertence ao namespace System, que está declarado no topo do arquivo.
+O projeto acima, além de conter uma dependência first-party, também contém uma dependência de framework. Neste caso, por exemplo, o projeto depende do framework .NET Core 2.2 e utiliza um método WriteLine para mostrar a mensagem no console. Este método pertence ao namespace **System**, que está declarado no topo do arquivo.
 
 ## Dependência Third-Party
 
@@ -90,7 +90,7 @@ namespace ThirdPartyDependency
     }
 }
 ```
-Nosso projeto acima precisa serializar um objeto e mostrá-lo no console. Para isso foi utilizado o pacote Newtonsoft.Json. Não temos acesso ao código fonte, e essa classe também não está presente no framework utilizado, assim temos o cenário de uma dependência third-party.
+Nosso projeto acima precisa serializar um objeto e mostrá-lo no console. Para isso foi utilizado o método **JsonConvert.SerializeObject** do pacote Newtonsoft.Json. Não temos acesso ao código fonte, e essa classe também não está presente no framework utilizado, assim temos o cenário de uma dependência third-party.
 
 ## Conclusões
 
