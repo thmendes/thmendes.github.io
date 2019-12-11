@@ -7,9 +7,8 @@ published: false
 
 I hope you like it!
 
-# Highlighter
 ## Ruby
-```ruby
+```c++
 def show
   puts "Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line"
   @widget = Widget(params[:id])

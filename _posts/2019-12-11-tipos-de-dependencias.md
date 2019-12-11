@@ -1,7 +1,12 @@
 ---
+layout: post
 title: "[Técnico] Tipos de Dependências"
 published: true
+categories: [blog, técnico]
+tags: [dependência, .NET]
 ---
+
+![My helpful screenshot](/assets/dependency.jpg)
 
 ## Tipos de Dependências
 
@@ -14,13 +19,13 @@ Em nossos projetos não é diferente, quantas vezes só importamos aquela nossa 
 
 Cada um desses casos citados acima representa um tipo de dependência.
 
-Dependência first-party
+## Dependência first-party
 
 Apresentada no livro como dependência first-party, esse fenômeno é a relação entre entidades manipuláveis do seu projeto. Por exemplo, relação entre duas classes, relação entre dois métodos, ou entre duas classes de projetos diferentes - mas presentes na mesma solução (quando utilizado o Visual Studio). 
 
 Um exemplo de dependência first-part é o seguinte código: 
 
-```
+```c#
 using System;
 
 namespace FirstPartyDependency
@@ -46,11 +51,11 @@ namespace FirstPartyDependency
 
 Para escrever HelloWorld no console, a classe Program necessita chamar o método Write da classe WriteHelloWorld. Assim, criando uma dependência entre as duas entidades, onde Program depende de WriteHelloWorld.
 
-##Dependência de Framework
+## Dependência de Framework
 
 O projeto acima, além de conter uma dependência first-party, também contém uma dependência de framework. Neste caso, por exemplo, o projeto depende do framework .NET Core 2.2 e utiliza um método WriteLine para mostrar a mensagem no console. Este método pertence ao namespace System, que está declarado no topo do arquivo.
 
-##Dependência Third-Party
+## Dependência Third-Party
 
 Ao longo que nosso projeto cresce, mais surge a necessidade de focar no coração do negócio e com isso, evitar reconstruir a roda - que na maioria dos casos leva muito tempo. 
 
@@ -59,7 +64,7 @@ Com esse intuito, nós buscamos pacotes de terceiros para resolver problemas pon
 O código abaixo exemplifica essa dependência:
 
 
-```
+```c#
 using Newtonsoft.Json;
 using System;
 
@@ -89,7 +94,7 @@ namespace ThirdPartyDependency
 ```
 Nosso projeto acima precisa serializar um objeto e mostrá-lo no console. Para isso foi utilizado o pacote Newtonsoft.Json. Não temos acesso ao código fonte, e essa classe também não está presente no framework utilizado, assim temos o cenário de uma dependência third-party.
 
-##Conclusões
+## Conclusões
 
 Ter dependência em seu código não significa que ele seja ruim, que você deve reescrever tudo. Não! Ruim é não ter conhecimento das dependências existentes e não gerenciá-las com o devido cuidado.
 
